@@ -1,0 +1,14 @@
+
+version: '2.3'
+
+services:
+   keras_yolo:
+     container_name: keras_yolo
+     build: ./
+     restart: always
+     runtime: nvidia
+     volumes:
+      - ./data:/data
+     environment:
+      - DISPLAY=$DISPLAY
+      - NVIDIA_VISIBLE_DEVICES=all

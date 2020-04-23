@@ -1,0 +1,4 @@
+classes=4
+train=microcontroller-detection/train.txt
+valid=microcontroller-detection/test.txt
+names=microcontroller-detection/microcontroller.names
