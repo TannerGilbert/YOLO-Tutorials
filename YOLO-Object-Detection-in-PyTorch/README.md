@@ -56,7 +56,7 @@ The source could be an image, video, directory of images, webcam or an image str
 * RTSP stream: --source rtsp://170.93.143.139/rtplive/470011e600ef003a004ee33696235daa
 * HTTP stream: --source http://wmccpinetop.axiscam.net/mjpg/video.mjpg
 
-If you don't specify and source it use the data/samples folder. The results will automatically be saved inside the output folder.
+If you don't specify a source, it uses the data/samples folder. The results will automatically be saved inside the output folder.
 
 ```
 python3 detect.py
