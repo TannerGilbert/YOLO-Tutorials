@@ -137,6 +137,10 @@ if __name__ == '__main__':
         while cap.isOpened():
             ret, image = cap.read()
 
+            if not ret:
+                print('Video file finished.')
+                break
+
             boxes, confidences, classIDs, idxs = make_prediction(net, layer_names, labels, image, args.confidence, args.threshold)
 
             image = draw_bounding_boxes(image, boxes, confidences, classIDs, idxs, colors)
