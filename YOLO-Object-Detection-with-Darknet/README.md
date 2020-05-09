@@ -4,7 +4,9 @@
 
 ## Installing Darknet
 
-If you don't already have Darknet installed, you'll have to [install it](https://pjreddie.com/darknet/install). Darknet can be installed for both CPU or GPU. You can also compile with OpenCV if you want support for more image formats. 
+If you don't already have Darknet installed, you'll have to [install it](https://github.com/AlexeyAB/darknet#how-to-compile-on-linux-using-cmake). Darknet can be installed for both CPU or GPU. You can also compile with OpenCV if you want support for more image formats.
+
+We'll make use of [AlexeyAB/darknet](https://github.com/AlexeyAB/darknet), a fork of the original darknet repository with some added features.
 
 ## Detection Using A Pre-Trained Model
 
@@ -84,7 +86,7 @@ wget http://www.robots.ox.ac.uk/ActiveVision/Research/Projects/2009bbenfold_head
 
 [![pedestrian detection](https://img.youtube.com/vi/d2-x8qwK1f4/0.jpg)](https://www.youtube.com/watch?v=d2-x8qwK1f4)
 
-> Note: Standardly, Darknet doesn't support saving the video. If you want to save the image you have to use [AlexeyAB/darknet](https://github.com/AlexeyAB/darknet), a fork of the original darknet repository with some added features. Using this, you can save the video by specifying the ```-out_filename``` argument. You can also choose not to display the video if you're for example connected to a remote machine by specifying ```-dont_show```.
+> Note: If you want to save the image you have to specifying the ```-out_filename``` argument. You can also choose not to display the video if you're, for example, connected to a remote machine by specifying ```-dont_show```.
 
 ```bash
 ./darknet detector demo cfg/coco.data cfg/yolov3.cfg yolov3.weights TownCentreXVID.avi -dont_show -out_filename yolo_pedestrian_detection.avi
