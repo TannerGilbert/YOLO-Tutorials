@@ -119,4 +119,22 @@ To train the model pass your yml file to the `train.py` script. You can also pas
 python train.py --img 640 --batch 16 --epochs 300 --data microcontroller-detection.yml --weights yolov3.pt
 ```
 
-![](doc/start_training.PNG)
+![start training](doc/start_training.PNG)
+
+All results by default are logged to runs/train, with a new experiment directory created for each new training as runs/train/exp2, runs/train/exp3, etc. 
+
+![test batch predictions](doc/test_batch0_pred.jpg)
+
+Training losses and performance metrics are also logged to Tensorboard and a custom results.txt logfile.
+
+![Training results](doc/results.png)
+
+### 4. Make predictions with trained model
+
+After the training has finished, the best and latest model weights are saved. They can be used to make predictions on custom images using the `detect.py` script.
+
+```
+python3 detect.py --weights runs/train/exp/weights/best.pt --img 640 --conf 0.25 --source <path to image>
+```
+
+![Microcontroller Prediction Example](doc/microcontroller_prediction_example.jpg)
